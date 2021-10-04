@@ -1,0 +1,24 @@
+.aside {
+    background-color: black;
+    width: 117px;
+    height: calc(100vh - 208px);
+    left: 0px;
+}
+
+.aside_choices {
+    margin-left: 26px;
+    padding-top: 50%;
+}
+
+.aside_icon {
+    margin: 10px 0px 10px 0px;
+}
+
+.aside>p {
+    color: white;
+    font-size: 12px;
+    transform: rotate(-90deg);
+    margin-top: 100%;
+    padding-bottom: 25px;
+    width: 138px;
+}

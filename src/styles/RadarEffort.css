@@ -1,0 +1,7 @@
+.radar_effort line {
+    stroke: none;
+}
+
+.recharts-polar-angle-axis-ticks {
+    font-size: 12px;
+}

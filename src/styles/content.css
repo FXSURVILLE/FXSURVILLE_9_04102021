@@ -1,0 +1,45 @@
+.content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.welcome {
+    width: 100%;
+    background-color: lightsalmon;
+}
+
+.graphes {
+    width: 75%;
+    background-color: blue;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.poids {
+    width: 100%;
+}
+.cible, .radar_effort, .kpi {
+    width: calc(33% - 20px);
+    height: 263px;
+}
+.cible {
+    background-color: red;
+}
+.radar_effort {
+    background-color: #282D30;
+}
+.kpi {
+    background-color: greenyellow;
+}
+
+.states {
+    width: 25%;
+    background-color: lightblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.state_icon {
+    margin: 32px;
+}

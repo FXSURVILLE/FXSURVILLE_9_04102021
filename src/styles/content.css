@@ -1,6 +1,8 @@
 .content {
   display: flex;
   flex-wrap: wrap;
+  margin: 50px 90px 88px 100px;
+  width: calc(100% - 307px);
 }
 
 .welcome {

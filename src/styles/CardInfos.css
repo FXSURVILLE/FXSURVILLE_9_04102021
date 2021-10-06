@@ -10,6 +10,8 @@
     width: 100%;
     display: flex;
     flex-direction: row;
+    background-color:  #FBFBFB;
+    border-radius: 5px;
 }
 
 .state_icon {

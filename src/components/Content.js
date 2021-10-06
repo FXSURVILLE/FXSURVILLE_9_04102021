@@ -1,10 +1,10 @@
 import React from 'react';
 import { withRouter } from "react-router";
 import '../styles/content.css'
-import Weight from './Weight';
-import Target from './Target';
+import Weight from './WeightChart';
+import Target from './TargetChart';
 import RadarEffort from './RadarEffort';
-import Kpi from './Kpi';
+import Kpi from './KpiChart';
 import {ReactComponent as Calories} from '../assets/calories.svg'
 import {ReactComponent as Protein} from '../assets/protein.svg'
 import {ReactComponent as Carbs} from '../assets/carbs.svg'

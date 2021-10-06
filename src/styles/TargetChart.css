@@ -1,0 +1,17 @@
+.sessions_chart {
+    padding-top: 50px;
+    font-size: 12px;
+}
+
+.sessions_chart line {
+    stroke: none;
+}
+.custom-tooltip {
+    padding: 10px;
+    font-size: 8px;
+    background-color: white;
+}
+
+.custom-tooltip line{
+    stroke: none;
+}

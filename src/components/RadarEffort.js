@@ -20,7 +20,7 @@ export default class RadarEffort extends PureComponent {
       <ResponsiveContainer width="100%" aspect={1.2} className="radar_effort" >
         <RadarChart cx="50%" cy="50%" outerRadius="80%" data={data2}>
           <PolarGrid />
-          <PolarAngleAxis dataKey="value" stroke="white" axisLine="false" />
+          <PolarAngleAxis dataKey="kind" stroke="white" axisLine="false" />
           {/* <PolarRadiusAxis /> graduation désactivée */}
           <Radar name={performances.userId} dataKey="value" stroke="#FF0101" fill="#FF0101" fillOpacity={0.7} />
         </RadarChart>

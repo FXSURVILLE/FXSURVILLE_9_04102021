@@ -27,6 +27,9 @@
 .recharts-default-legend {
     font-size: 14px;
 }
+.recharts-default-legend span {
+    color:#74798C
+}
 
 .text {
     position: relative;

@@ -35,7 +35,7 @@ export default class Target extends PureComponent {
           }}
         >
           <CartesianGrid strokeDasharray="3 3" stroke="none" />
-          <XAxis dataKey="day" stroke="#FFFFFF" dx={20}/>
+          <XAxis dataKey="day" stroke="#FFFFFF" dx={10}/>
           <YAxis hide={true} />
           <Tooltip content={<CustomTooltip />} />
           <Area type="monotone" dataKey="sessionLength" stroke="#FFFFFF" fill="none" />

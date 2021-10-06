@@ -21,15 +21,14 @@
 }
 .cible, .radar_effort, .kpi {
     width: calc(33% - 20px);
-    height: 263px;
     border-radius: 5px;
 }
 .cible {
-    background-color: red;
+    background-color: #FF0000;
 }
 .radar_effort {
     background-color: #282D30;
 }
 .kpi {
-    background-color: greenyellow;
+    background-color: #FBFBFB;
 }

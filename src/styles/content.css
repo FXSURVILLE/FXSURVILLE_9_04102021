@@ -22,6 +22,7 @@
 .cible, .radar_effort, .kpi {
     width: calc(33% - 20px);
     height: 263px;
+    border-radius: 5px;
 }
 .cible {
     background-color: red;

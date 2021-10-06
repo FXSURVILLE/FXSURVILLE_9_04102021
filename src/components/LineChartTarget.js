@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-import '../styles/TargetChart.css'
+import '../styles/lineChartTarget.css'
 
 const sessionResults = require('../datas/averageSessions12.json')
 const sessions = sessionResults.data.sessions
@@ -8,7 +8,7 @@ const sessions = sessionResults.data.sessions
 function CustomTooltip({ payload, active }) {
   if (active) {
     return (
-      <div className="custom-tooltip-radar">
+      <div className="custom-tooltip-line">
         <p>{payload[0].value}min</p>
       </div>
     );

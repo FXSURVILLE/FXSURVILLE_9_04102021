@@ -1,10 +1,10 @@
 import React from 'react';
 import { withRouter } from "react-router";
 import '../styles/content.css'
-import Weight from '../components/ActivityChart';
-import Target from '../components/TargetChart';
-import RadarEffort from '../components/performanceRadar';
-import Kpi from '../components/KpiChart';
+import Weight from '../components/BarChartActivity';
+import Target from '../components/LineChartTarget';
+import RadarEffort from '../components/RadarChartPerf';
+import Kpi from '../components/RadialBarChartKpi';
 import CardInfos from '../components/CardInfos';
 
 const main = require('../datas/main12.json')

@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Label, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-import '../styles/activityChart.css'
+import '../styles/barChartActivity.css'
 
 const activites = require('../datas/activity12.json')
 

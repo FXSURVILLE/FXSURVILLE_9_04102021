@@ -6,7 +6,7 @@
 .sessions_chart line {
     stroke: none;
 }
-.custom-tooltip-radar {
+.custom-tooltip-line {
     padding: 10px;
     font-size: 8px;
     background-color: white;

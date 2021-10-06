@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer } from 'recharts';
-import '../styles/performanceRadar.css'
+import '../styles/radarChartPerf.css'
 
 const performances = require('../datas/performance12.json')
 const data1= performances.data.kind

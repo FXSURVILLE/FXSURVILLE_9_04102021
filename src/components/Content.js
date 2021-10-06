@@ -1,9 +1,9 @@
 import React from 'react';
 import { withRouter } from "react-router";
 import '../styles/content.css'
-import Weight from './WeightChart';
+import Weight from './ActivityChart';
 import Target from './TargetChart';
-import RadarEffort from './RadarEffort';
+import RadarEffort from './performanceRadar';
 import Kpi from './KpiChart';
 import {ReactComponent as Calories} from '../assets/calories.svg'
 import {ReactComponent as Protein} from '../assets/protein.svg'

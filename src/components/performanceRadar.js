@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer } from 'recharts';
-import '../styles/RadarEffort.css'
+import '../styles/performanceRadar.css'
 
 const performances = require('../datas/performance12.json')
 const data1= performances.data.kind
@@ -18,7 +18,7 @@ export default class RadarEffort extends PureComponent {
   render() {
     return (
       <ResponsiveContainer width="100%" aspect={1.2} className="radar_effort" >
-        <RadarChart cx="50%" cy="50%" outerRadius="80%" data={data2}>
+        <RadarChart cx="50%" cy="50%" outerRadius="80%" data={performances.data.data}>
           <PolarGrid />
           <PolarAngleAxis dataKey="kind" stroke="white" axisLine="false" />
           {/* <PolarRadiusAxis /> graduation désactivée */}

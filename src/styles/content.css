@@ -10,7 +10,7 @@
 
 .graphes {
     width: 75%;
-    background-color: blue;
+    /* background-color: blue; */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;

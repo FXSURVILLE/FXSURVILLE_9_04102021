@@ -1,0 +1,33 @@
+
+.recharts-wrapper{
+    padding-top: 1OOpx;
+}
+
+.recharts-wrapper .recharts-cartesian-axis-line {
+    stroke: none;
+}
+
+.recharts-bar-rectangle path {
+    border-radius: 3px;
+    width: 7px;
+}
+
+.recharts-wrapper .legend-item-1 {
+    margin-left: 30px;
+}
+
+.custom-tooltip-bar {
+    padding: 5px;
+    font-size: 7px;
+    line-height: 24px;
+    background-color: red;
+    color:white
+}
+
+.recharts-default-legend {
+    font-size: 14px;
+}
+
+.text {
+    position: relative;
+}

@@ -8,7 +8,7 @@ const sessions = sessionResults.data.sessions
 function CustomTooltip({ payload, active }) {
   if (active) {
     return (
-      <div className="custom-tooltip">
+      <div className="custom-tooltip-radar">
         <p>{payload[0].value}min</p>
       </div>
     );

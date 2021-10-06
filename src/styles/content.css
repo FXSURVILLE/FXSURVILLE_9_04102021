@@ -5,7 +5,7 @@
 
 .welcome {
     width: 100%;
-    background-color: lightsalmon;
+    /* background-color: lightsalmon; */
 }
 
 .graphes {
@@ -31,15 +31,4 @@
 }
 .kpi {
     background-color: greenyellow;
-}
-
-.states {
-    width: 25%;
-    background-color: lightblue;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.state_icon {
-    margin: 32px;
 }

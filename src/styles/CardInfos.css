@@ -1,0 +1,31 @@
+
+.states {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.state {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.state_icon {
+    margin: 32px;
+}
+
+.state_infos {
+    margin-top: 40px;
+}
+
+.state_infos h5 {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.state_infos p {
+    font-size: 14px;
+}
+

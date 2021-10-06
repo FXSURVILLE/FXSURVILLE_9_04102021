@@ -1,22 +1,20 @@
 import React from 'react';
 import { withRouter } from "react-router";
 import '../styles/content.css'
-import Weight from './ActivityChart';
-import Target from './TargetChart';
-import RadarEffort from './performanceRadar';
-import Kpi from './KpiChart';
-import {ReactComponent as Calories} from '../assets/calories.svg'
-import {ReactComponent as Protein} from '../assets/protein.svg'
-import {ReactComponent as Carbs} from '../assets/carbs.svg'
-import {ReactComponent as Fat} from '../assets/fat.svg'
+import Weight from '../components/ActivityChart';
+import Target from '../components/TargetChart';
+import RadarEffort from '../components/performanceRadar';
+import Kpi from '../components/KpiChart';
+import CardInfos from '../components/CardInfos';
 
+const main = require('../datas/main12.json')
 
 class Content extends React.Component {
     render () {
         return (
             <div className='content'>
                 <div className='welcome'>
-                    <h2>Bonjour Thomas</h2>
+                    <h2>Bonjour {main.data.userInfos.firstName} </h2>
                     <p >Félicitation ! Vous avez explosé vos objectifs hier 👏</p>                
                 </div>
                 <div className='graphes'>
@@ -33,12 +31,7 @@ class Content extends React.Component {
                         <Kpi />
                     </div>
                 </div>
-                <div className='states'>
-                    <Calories className='state_icon'/>
-                    <Protein className='state_icon'/>
-                    <Carbs className='state_icon'/>
-                    <Fat className='state_icon'/>
-                </div>
+                <CardInfos />
             </div>
         )
     }    

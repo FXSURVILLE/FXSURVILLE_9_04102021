@@ -14,7 +14,7 @@ class Content extends React.Component {
         return (
             <div className='content'>
                 <div className='welcome'>
-                    <h2>Bonjour {main.data.userInfos.firstName} </h2>
+                    <h2>Bonjour  <span>{main.data.userInfos.firstName}</span> </h2>
                     <p >Félicitation ! Vous avez explosé vos objectifs hier 👏</p>                
                 </div>
                 <div className='graphes'>

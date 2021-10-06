@@ -7,7 +7,17 @@
 
 .welcome {
     width: 100%;
-    /* background-color: lightsalmon; */
+}
+.welcome h2 {
+    font-size: 48px;
+}
+.welcome h2 span {
+    color: #FF0000;
+}
+.welcome p {
+    font-size: 18px;
+    padding-top: 30px;
+    padding-bottom: 60px;
 }
 
 .graphes {

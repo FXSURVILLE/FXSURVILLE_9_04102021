@@ -16,9 +16,8 @@ function CustomTooltip({ payload, active }) {
   return null;
 }
 
-console.log(sessions)
+// console.log(sessions)
 export default class Target extends PureComponent {
-  static demoUrl = 'https://codesandbox.io/s/simple-area-chart-4ujxw';
 
   render() {
     return (

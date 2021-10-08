@@ -3,15 +3,15 @@ import { Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer } fro
 import '../styles/radarChartPerf.css'
 
 const performances = require('../datas/performance12.json')
-const data1= performances.data.kind
-const data2= performances.data.data
-const data3= data2.map(e=>e.data)
+// const data1= performances.data.kind
+// const data2= performances.data.data
+// const data3= data2.map(e=>e.data)
 // const data4= [performances.data.kind,performances.data]
 
 
-console.log(data1)
-console.log(data2)
-console.log(data3)
+// console.log(data1)
+// console.log(data2)
+// console.log(data3)
 export default class RadarEffort extends PureComponent {
   static demoUrl = 'https://codesandbox.io/s/simple-radar-chart-rjoc6';
 

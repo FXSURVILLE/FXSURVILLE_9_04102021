@@ -1,9 +1,13 @@
 import React, { PureComponent } from 'react';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Label, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import '../styles/barChartActivity.css'
+// import {aqw} from '../datas/API'
+import { clientID } from '../datas/API';
 
-const activites = require('../datas/activity12.json')
+// var client = clientID();
+// const activites = require('../datas/activity12.json')
 
+// console.log(clientID())
 function CustomTooltip({ payload, active }) {
   if (active) {
     return (
@@ -22,28 +26,41 @@ const legendText = (value) => {
   return (<span>{value}</span>);
 };
 
+// const client = "18"
 
 export default class Example extends PureComponent {
+  constructor() {
+    super();
+    this.state = {activities:{}}
+  }
+
+  componentDidMount() {
+    // fetchActivity()
+    fetch('http://localhost:3000/user/'+clientID()+'/activity')
+  .then(response => response.json())
+  .then(activity => this.setState({activities: activity?.data.sessions}))
+  }
+
 
   render() {
+    // let aa =this.state.azer
+    // console.log(this.state.activities)
+    // console.log(activites)
     return (
       <ResponsiveContainer width="100%" height="100%" className="activity_chart" >
         <BarChart
           width={500}
           height={320}
-          data={activites.data.sessions}
+          data={this.state.activities}
           margin={{
             top: 20,
             right: 30,
             left: 30,
             bottom: 5,
           }}>
-          {/* <Label value="Activité quotidienne"/> */}
           <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="day" stroke="#9B9EAC" >
-            {/* <Label value="Activité quotidienne" offset={0} position="insideTopLeft" /> */}
-          </XAxis>
-          <YAxis yAxisId="left" orientation="right" stroke="#9B9EAC" />
+          <XAxis dataKey="day" stroke="#9B9EAC" />
+          <YAxis yAxisId="left" orientation="right" stroke="#9B9EAC" tickCount={3} />
           <YAxis hide={true} yAxisId="right" orientation="right" stroke="#9B9EAC" />
           <Tooltip content={<CustomTooltip />} />
           <Legend 

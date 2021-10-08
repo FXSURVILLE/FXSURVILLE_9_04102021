@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import { RadialBarChart, RadialBar, ResponsiveContainer } from 'recharts';
 import '../styles/radialBarChartKpi.css'
 
-const kpi = require('../datas/main12.json')
+// const kpi = require('../datas/main12.json')
 
 const data = [
   // {

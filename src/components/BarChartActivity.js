@@ -52,10 +52,9 @@ export default class Example extends PureComponent {
 
 
   render() {
-    console.log(this.state.activities)
-    // console.log(this.state.activities2)
-    // console.log(activites.data)
-    // console.log(activites)
+    const CustomXaxis = (value) => {
+      return value.substring(value.length - 1 ,value.length)
+    }
     const activites = this.state.activities
     if (this.state.loading) {
       return <div>Loading</div>;
@@ -75,7 +74,7 @@ export default class Example extends PureComponent {
             bottom: 5,
           }}>
           <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="day" stroke="#9B9EAC" />
+          <XAxis dataKey="day" stroke="#9B9EAC" tickFormatter={CustomXaxis}  />
           <YAxis yAxisId="left" orientation="right" stroke="#9B9EAC" tickCount={3} />
           <YAxis hide={true} yAxisId="right" orientation="right" stroke="#9B9EAC" />
           <Tooltip content={<CustomTooltip />} />

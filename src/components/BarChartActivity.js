@@ -1,13 +1,13 @@
 import React, { PureComponent } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import '../styles/barChartActivity.css'
-// import {aqw} from '../datas/API'
-import { clientID } from '../datas/API';
+import CallAPI from '../datas/API';
 
-// var client = clientID();
+
 // const activites = require('../datas/activity12.json')
+// const rrrr=CallAPI.getActivity()
+// console.log(getActivity)
 
-// console.log(clientID())
 function CustomTooltip({ payload, active }) {
   if (active) {
     return (
@@ -29,29 +29,45 @@ const legendText = (value) => {
 // const client = "18"
 
 export default class Example extends PureComponent {
-  constructor() {
-    super();
-    this.state = {activities:{}}
+  constructor(props) {
+    super(props);
+    this.state = {
+      activities:{},
+      loading:true,
+      error:false
+    }
   }
 
   componentDidMount() {
-    // fetchActivity()
-    fetch('http://localhost:3000/user/'+clientID()+'/activity')
-  .then(response => response.json())
-  .then(activity => this.setState({activities: activity?.data.sessions}))
+    this.setState({loading: 'Bonjour'});
+    // fetch('http://localhost:3000/user/'+12+'/activity')
+    CallAPI.getActivity()
+    // .then(response => response.json())
+    .then(activity => this.setState({activities: activity.data,loading:false}))
+    // .then(activity => console.log(activity.data.data.sessions))
+    .catch(function () {
+      this.setState({error: true})
+    })
   }
 
 
   render() {
-    // let aa =this.state.azer
-    // console.log(this.state.activities)
+    console.log(this.state.activities)
+    // console.log(this.state.activities2)
+    // console.log(activites.data)
     // console.log(activites)
+    const activites = this.state.activities
+    if (this.state.loading) {
+      return <div>Loading</div>;
+    } else if (this.state.error) {
+      return <div>Error</div>;
+    } else {
     return (
       <ResponsiveContainer width="100%" height="100%" className="activity_chart" >
         <BarChart
           width={500}
           height={320}
-          data={this.state.activities}
+          data={activites.data.sessions}
           margin={{
             top: 20,
             right: 30,
@@ -76,5 +92,6 @@ export default class Example extends PureComponent {
         </BarChart>
       </ResponsiveContainer>
     );
+    }
   }
 }

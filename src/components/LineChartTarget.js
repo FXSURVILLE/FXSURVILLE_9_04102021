@@ -56,6 +56,8 @@ export default class Target extends PureComponent {
       return <div>Error</div>;
     } else {
     return (
+      <div className="line-chart-activity">
+      <h3>Durée moyenne des sessions</h3>
       <ResponsiveContainer width="100%" aspect={1.2} className="sessions_chart" >
         <AreaChart
           width={500}
@@ -75,6 +77,7 @@ export default class Target extends PureComponent {
           <Area type="monotone" dataKey="sessionLength" stroke="#FFFFFF" fill="none" />
         </AreaChart>
       </ResponsiveContainer>
+      </div>
     );
     }
   }

@@ -1,3 +1,16 @@
+.line-chart-activity {
+    position: relative;
+}
+
+.line-chart-activity>h3 {
+    position: relative;
+    width: 140px;
+    top: 29px;
+    left: 10%;
+    color: white;
+    font-size: 15px;
+}
+
 .sessions_chart {
     padding-top: 50px;
     font-size: 12px;

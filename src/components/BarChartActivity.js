@@ -39,12 +39,8 @@ export default class Example extends PureComponent {
   }
 
   componentDidMount() {
-    // this.setState({loading: 'Bonjour'});
-    // fetch('http://localhost:3000/user/'+12+'/activity')
     CallAPI.getActivity()
-    // .then(response => response.json())
     .then(data => this.setState({activities: data.data,loading:false}))
-    // .then(activity => console.log(activity.data.data.sessions))
     .catch(function () {
       this.setState({error: true})
     })

@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types'
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import '../styles/barChartActivity.css'
 import CallAPI from '../datas/API';
@@ -28,7 +29,7 @@ const legendText = (value) => {
 
 // const client = "18"
 
-export default class Example extends PureComponent {
+export default class Weight extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
@@ -39,7 +40,7 @@ export default class Example extends PureComponent {
   }
 
   componentDidMount() {
-    CallAPI.getActivity()
+    CallAPI.getActivity(this.props.id)
     .then(data => this.setState({activities: data.data,loading:false}))
     .catch(function () {
       this.setState({error: true})
@@ -92,4 +93,11 @@ export default class Example extends PureComponent {
     );
     }
   }
+}
+
+Weight.propTypes = {
+  /**
+   * User's ID
+   */
+  id: PropTypes.number.isRequired
 }

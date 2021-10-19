@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types'
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer } from 'recharts';
 import '../styles/radarChartPerf.css'
 import CallAPI from '../datas/API';
@@ -18,7 +19,7 @@ export default class RadarEffort extends PureComponent {
   }
 
   componentDidMount() {
-    CallAPI.getSessionIntensity()
+    CallAPI.getSessionIntensity(this.props.id)
     .then(data => this.setState({performancesData: data.data.data,loading:false}))
     .catch(function () {
       this.setState({error: true})
@@ -50,4 +51,11 @@ export default class RadarEffort extends PureComponent {
     );
     }
   }
+}
+
+RadarEffort.propTypes = {
+  /**
+   * User's ID
+   */
+  id: PropTypes.number.isRequired
 }

@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types'
 import { RadialBarChart, RadialBar, ResponsiveContainer } from 'recharts';
 import '../styles/radialBarChartKpi.css'
 import CallAPI from '../datas/API';
@@ -16,7 +17,7 @@ export default class Kpi extends PureComponent {
   }
 
   componentDidMount() {
-    CallAPI.getUserById()
+    CallAPI.getUserById(this.props.id)
     .then(data => this.setState({userDatas: data.data.data,loading:false}))
     .catch(function () {
       this.setState({error: true})
@@ -27,7 +28,7 @@ export default class Kpi extends PureComponent {
     const userScore = this.state.userDatas
     let scoreId=userScore.todayScore
     if (!scoreId>0) {scoreId=userScore.score}
-    console.log(scoreId)
+    // console.log(scoreId)
     const data = [
       { uv: 1, fill: '#FBFBFB' },
       { uv: scoreId,fill: 'red'}
@@ -64,39 +65,9 @@ export default class Kpi extends PureComponent {
   }
 }
 
-// import React, { PureComponent } from 'react';
-// import { PieChart, Pie, Sector, Cell, ResponsiveContainer } from 'recharts';
-
-// const data = [
-//   { name: 'Group A', value: 400 },
-//   { name: 'Group B', value: 300 },
-//   { name: 'Group C', value: 300 },
-//   { name: 'Group D', value: 200 },
-// ];
-// const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
-
-// export default class Example extends PureComponent {
-//   static demoUrl = 'https://codesandbox.io/s/pie-chart-with-padding-angle-7ux0o';
-
-//   render() {
-//     return (
-//       <PieChart width={800} height={400}>
-//         <Pie
-//           data={data}
-//           cx={120}
-//           cy={100}
-//           innerRadius={60}
-//           outerRadius={80}
-//           fill="red"
-//           paddingAngle={0}
-//           dataKey="value"
-//           startAngle={90}
-//         >
-//           {data.map((entry, index) => (
-//             <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-//           ))}
-//         </Pie>
-//       </PieChart>
-//     );
-//   }
-// }
+Kpi.propTypes = {
+  /**
+   * User's ID
+   */
+  id: PropTypes.number.isRequired
+}

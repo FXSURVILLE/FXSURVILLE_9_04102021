@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types'
 import '../styles/CardInfos.css'
 import {ReactComponent as Calories} from '../assets/calories.svg'
 import {ReactComponent as Protein} from '../assets/protein.svg'
@@ -20,7 +21,7 @@ export default class CardInfos extends PureComponent {
     }
 
     componentDidMount() {
-      CallAPI.getUserById()
+      CallAPI.getUserById(this.props.id)
       .then(data => this.setState({userDatas: data.data.data,loading:false}))
       .catch(function () {
         this.setState({error: true})
@@ -29,7 +30,6 @@ export default class CardInfos extends PureComponent {
 
     render() {
         const userData = this.state.userDatas.keyData
-        // console.log(userData)
         if (this.state.loading) {
           return <div>Loading</div>;
         } else if (this.state.error) {
@@ -69,4 +69,12 @@ export default class CardInfos extends PureComponent {
             );
         }
     }
-  }
+}
+
+CardInfos.propTypes = {
+  /**
+   * User's ID
+   */
+  id: PropTypes.number.isRequired
+}
+  

@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types'
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import '../styles/lineChartTarget.css'
 import CallAPI from '../datas/API';
@@ -29,7 +30,7 @@ export default class Target extends PureComponent {
   }
 
   componentDidMount() {
-    CallAPI.getSessionDuration()
+    CallAPI.getSessionDuration(this.props.id)
     .then(data => this.setState({sessionResults: data.data.data.sessions,loading:false}))
     .catch(function () {
       this.setState({error: true})
@@ -81,4 +82,11 @@ export default class Target extends PureComponent {
     );
     }
   }
+}
+
+Target.propTypes = {
+  /**
+   * User's ID
+   */
+  id: PropTypes.number.isRequired
 }

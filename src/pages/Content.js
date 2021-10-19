@@ -16,12 +16,13 @@ class Content extends React.Component {
       this.state = {
         userDatas:{},
         loading:true,
-        error:false
+        error:false,
+        id:12
       }
     }
 
     componentDidMount() {
-      CallAPI.getUserById()
+      CallAPI.getUserById(this.state.id)
       .then(data => this.setState({userDatas: data.data.data,loading:false}))
       .catch(function () {
         this.setState({error: true})
@@ -29,7 +30,6 @@ class Content extends React.Component {
     }
     render () {
         const userData = this.state.userDatas.userInfos
-        // console.log(userData)
         if (this.state.loading) {
           return <div>Loading</div>;
         } else if (this.state.error) {
@@ -43,19 +43,19 @@ class Content extends React.Component {
                 </div>
                 <div className='graphes'>
                     <div className='poids'>
-                        <Weight/>
+                        <Weight id={this.state.id} /> 
                     </div>
                     <div className='cible'>
-                        <Target />
+                        <Target id={this.state.id} />
                     </div>
                     <div className='radar_effort'>
-                        <RadarEffort/>
+                        <RadarEffort id={this.state.id} />
                     </div>
                     <div className='kpi'>
-                        <Kpi />
+                        <Kpi id={this.state.id} />
                     </div>
                 </div>
-                <CardInfos />
+                <CardInfos id={this.state.id} />
             </div>
         )
         }

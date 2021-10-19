@@ -45,7 +45,7 @@ export default class Target extends PureComponent {
       5: "V",
       6: "S",
       7: "D",
-  }
+    }
     const CustomXaxis = (value) => {
       return day[value]
     }

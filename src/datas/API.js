@@ -4,7 +4,7 @@ import axios from 'axios';
  */
 axios.defaults.baseURL = 'http://localhost:3000';
 
-const id = 18;
+const id = 12;
 
 class CallAPI {
     static async getUserById() {

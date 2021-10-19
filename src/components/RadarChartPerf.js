@@ -32,7 +32,7 @@ export default class RadarEffort extends PureComponent {
       return type[value]
     }
     const performances = perfoData.data
-    console.log(type)
+    // console.log(type)
     if (this.state.loading) {
       return <div>Loading</div>;
     } else if (this.state.error) {

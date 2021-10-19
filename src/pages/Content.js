@@ -6,15 +6,39 @@ import Target from '../components/LineChartTarget';
 import RadarEffort from '../components/RadarChartPerf';
 import Kpi from '../components/RadialBarChartKpi';
 import CardInfos from '../components/CardInfos';
+import CallAPI from '../datas/API';
 
-const main = require('../datas/main12.json')
+// const main = require('../datas/main12.json')
 
 class Content extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        userDatas:{},
+        loading:true,
+        error:false
+      }
+    }
+
+    componentDidMount() {
+      CallAPI.getUserById()
+      .then(data => this.setState({userDatas: data.data.data,loading:false}))
+      .catch(function () {
+        this.setState({error: true})
+      })
+    }
     render () {
+        const userData = this.state.userDatas.userInfos
+        // console.log(userData)
+        if (this.state.loading) {
+          return <div>Loading</div>;
+        } else if (this.state.error) {
+          return <div>Error</div>;
+        } else {
         return (
             <div className='content'>
                 <div className='welcome'>
-                    <h2>Bonjour  <span>{main.data.userInfos.firstName}</span> </h2>
+                    <h2>Bonjour  <span>{userData.firstName}</span> </h2>
                     <p >Félicitation ! Vous avez explosé vos objectifs hier 👏</p>                
                 </div>
                 <div className='graphes'>
@@ -34,6 +58,7 @@ class Content extends React.Component {
                 <CardInfos />
             </div>
         )
+        }
     }    
 }
 export default withRouter(Content)

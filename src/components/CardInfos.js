@@ -29,7 +29,7 @@ export default class CardInfos extends PureComponent {
 
     render() {
         const userData = this.state.userDatas.keyData
-        console.log(userData)
+        // console.log(userData)
         if (this.state.loading) {
           return <div>Loading</div>;
         } else if (this.state.error) {

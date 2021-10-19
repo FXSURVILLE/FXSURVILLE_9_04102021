@@ -39,11 +39,11 @@ export default class Example extends PureComponent {
   }
 
   componentDidMount() {
-    this.setState({loading: 'Bonjour'});
+    // this.setState({loading: 'Bonjour'});
     // fetch('http://localhost:3000/user/'+12+'/activity')
     CallAPI.getActivity()
     // .then(response => response.json())
-    .then(activity => this.setState({activities: activity.data,loading:false}))
+    .then(data => this.setState({activities: data.data,loading:false}))
     // .then(activity => console.log(activity.data.data.sessions))
     .catch(function () {
       this.setState({error: true})
@@ -74,7 +74,7 @@ export default class Example extends PureComponent {
             bottom: 5,
           }}>
           <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="day" stroke="#9B9EAC" tickFormatter={CustomXaxis}  />
+          <XAxis dataKey="day" stroke="#9B9EAC" tickFormatter={CustomXaxis} />
           <YAxis yAxisId="left" orientation="right" stroke="#9B9EAC" tickCount={3} />
           <YAxis hide={true} yAxisId="right" orientation="right" stroke="#9B9EAC" />
           <Tooltip content={<CustomTooltip />} />

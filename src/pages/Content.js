@@ -17,6 +17,10 @@ class Content extends React.Component {
         userDatas:{},
         loading:true,
         error:false,
+        /**
+         * Users id: for Call API URL
+         * @param {integer} id 12 or 18 available
+        */
         id:12
       }
     }

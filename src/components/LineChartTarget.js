@@ -5,8 +5,13 @@ import '../styles/lineChartTarget.css'
 import CallAPI from '../datas/API';
 
 // const sessionResults = require('../datas/averageSessions12.json')
-// const sessions = sessionResults.data.sessions
 
+/**
+* Tooltip customized
+* @param {array} payload:The source data of the content to be displayed in the tooltip 
+* @param {boolean} active: If set true, the tooltip is displayed
+* @return {string} tooltip completed with value
+*/
 function CustomTooltip({ payload, active }) {
   if (active) {
     return (
@@ -47,6 +52,11 @@ export default class Target extends PureComponent {
       6: "S",
       7: "D",
     }
+    /**
+    * Xavis customized with array(day)
+    * @param {integer} transform the number for a letter(day)
+    * @return {string} return the first letter of the day
+    */
     const CustomXaxis = (value) => {
       return day[value]
     }

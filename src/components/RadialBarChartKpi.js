@@ -27,8 +27,18 @@ export default class Kpi extends PureComponent {
   render() {
     const userScore = this.state.userDatas
     let scoreId=userScore.todayScore
+    /**
+    * 2 keys available for the same information in the API
+    * check if key "todayScore" is available, or use "score"
+    * @param {integer} check if .todayScore is available(return a number)
+    * @return {integer} if not a number, use .score to get the value
+    */
     if (!scoreId>0) {scoreId=userScore.score}
-    // console.log(scoreId)
+    /**
+    * array for radial chart
+    * @param {integer} score value from User
+    * @return {array} array with ref value and stored value
+    */
     const data = [
       { uv: 1, fill: '#FBFBFB' },
       { uv: scoreId,fill: 'red'}
@@ -46,14 +56,11 @@ export default class Kpi extends PureComponent {
           startAngle={90}
           data={data}>
             <RadialBar
-              // minAngle={15}
-              // label={{ position: 'insideStart', fill: '#fff' }}
               background
               clockWise
               dataKey="uv"
               cornerRadius={50}
             />
-            {/* <Legend iconSize={10} layout="vertical" verticalAlign="middle" wrapperStyle={style} /> */}
           </RadialBarChart>
         </ResponsiveContainer>
         <div className="radialInfos" >{scoreId*100}%

@@ -6,9 +6,13 @@ import CallAPI from '../datas/API';
 
 
 // const activites = require('../datas/activity12.json')
-// const rrrr=CallAPI.getActivity()
-// console.log(getActivity)
 
+/**
+* Tooltip customized
+* @param {array} payload:The source data of the content to be displayed in the tooltip 
+* @param {boolean} active: If set true, the tooltip is displayed
+* @return {string} tooltip completed with values
+*/
 function CustomTooltip({ payload, active }) {
   if (active) {
     return (
@@ -21,13 +25,15 @@ function CustomTooltip({ payload, active }) {
   return null;
 }
 
+/**
+* text for legend
+* @param {string} check if "kilogram"
+* @return {string} if "kilogram" return text1, else text2
+*/
 const legendText = (value) => {
   value = value === "kilogram" ? "Poids (kg)" : "Calories brûlées (Kcal)"
-
   return (<span>{value}</span>);
 };
-
-// const client = "18"
 
 export default class Weight extends PureComponent {
   constructor(props) {
@@ -49,8 +55,13 @@ export default class Weight extends PureComponent {
 
 
   render() {
+    /**
+   * Xaxis values customized
+   * @param {string} value received for Xaxis (date) 
+   * @return {string} keep only the 2 last characters from the string(day)
+   */
     const CustomXaxis = (value) => {
-      return value.substring(value.length - 1 ,value.length)
+      return value.substring(value.length-2)
     }
     const activites = this.state.activities
     if (this.state.loading) {

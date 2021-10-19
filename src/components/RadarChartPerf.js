@@ -6,8 +6,6 @@ import CallAPI from '../datas/API';
 
 // const performances = require('../datas/performance12.json')
 
-
-// console.log(data1)
 export default class RadarEffort extends PureComponent {
   constructor(props) {
     super(props);
@@ -28,12 +26,20 @@ export default class RadarEffort extends PureComponent {
 
   render() {
     const perfoData = this.state.performancesData
+    /**
+    * @param {string} values from API
+    * @return {array} array with kinds
+    */
     const type = perfoData.kind
+    /**
+    * Avis customized with kind
+    * @param {integer} transform the number for a kind value
+    * @return {string} return the kind value
+    */
     const CustomAxis = (value) => {
       return type[value]
     }
     const performances = perfoData.data
-    // console.log(type)
     if (this.state.loading) {
       return <div>Loading</div>;
     } else if (this.state.error) {

@@ -62,6 +62,8 @@ export default class Example extends PureComponent {
       return <div>Error</div>;
     } else {
     return (
+      <div className="bar-chart-activity">
+      <h3>Activité quotidienne</h3>
       <ResponsiveContainer width="100%" height="100%" className="activity_chart" >
         <BarChart
           width={500}
@@ -90,6 +92,7 @@ export default class Example extends PureComponent {
           <Bar yAxisId="right" dataKey="calories" fill="#E60000" barSize={7} radius={[3,3,0,0]} />
         </BarChart>
       </ResponsiveContainer>
+      </div>
     );
     }
   }

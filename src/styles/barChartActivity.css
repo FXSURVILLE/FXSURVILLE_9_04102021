@@ -1,7 +1,17 @@
+.bar-chart-activity {
+    position: relative;
+}
+
+.bar-chart-activity>h3 {
+    position: relative;
+    top: 40px;
+    left: 32px;
+    font-size: 15px;
+}
+
 .activity_chart {
     min-height: 300px;
 }
-
 
 .recharts-wrapper{
     padding-top: 1OOpx;
@@ -33,8 +43,4 @@
 }
 .recharts-default-legend span {
     color:#74798C
-}
-
-.text {
-    position: relative;
 }

@@ -1,4 +1,21 @@
-# Getting Started with Create React App
+[![JavaScript](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://developer.mozilla.org/) 
+[![React](./src/assets/uses-react.svg)](https://fr.reactjs.org/)
+[![CSS](https://forthebadge.com/images/badges/uses-css.svg)](https://developer.mozilla.org/)
+[![Jsdocs](./src/assets/documented-jsdocs.svg)](https://jsdoc.app/)
+***
+
+# SportSee
+
+SportSee website
+
+## How to start?
+
+- Clone the [back-end Data from GitHub](https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard "back-end Data") and follow the Readme.
+- Clone the [front-end from GitHub](https://github.com/FXSURVILLE/FXSURVILLE_9_04102021 "front-end Data").
+- Install [yarn](https://yarnpkg.com "yarn").
+---
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -39,32 +56,20 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+### `Jsdocs`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Use https://jsdoc.app to add documentation
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### `Axios`
 
-### Code Splitting
+[Axios](https://axios-http.com/) is used for calls API
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## Authors
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Our code team :
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+|Name|Github|For|
+|----|------|---|
+|FX|https://github.com/FXSURVILLE|SportSee|

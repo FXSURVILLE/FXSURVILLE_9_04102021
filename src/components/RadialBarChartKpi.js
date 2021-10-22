@@ -4,7 +4,7 @@ import { RadialBarChart, RadialBar, ResponsiveContainer } from 'recharts';
 import '../styles/radialBarChartKpi.css'
 import CallAPI from '../datas/API';
 
-// const kpi = require('../datas/main12.json')
+// const userDatas = require('../datas/main12.json')
 
 export default class Kpi extends PureComponent {
   constructor(props) {
@@ -30,13 +30,13 @@ export default class Kpi extends PureComponent {
     /**
     * 2 keys available for the same information in the API
     * check if key "todayScore" is available, or use "score"
-    * @param {integer} check if .todayScore is available(return a number)
-    * @return {integer} if not a number, use .score to get the value
+    * @param {number} check if .todayScore is available(return a number)
+    * @return {number} if not a number, use .score to get the value
     */
     if (!scoreId>0) {scoreId=userScore.score}
     /**
     * array for radial chart
-    * @param {integer} score value from User
+    * @param {number} score value from User
     * @return {array} array with ref value and stored value
     */
     const data = [

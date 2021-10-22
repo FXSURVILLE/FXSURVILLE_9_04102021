@@ -7,7 +7,7 @@ import {ReactComponent as Carbs} from '../assets/carbs.svg'
 import {ReactComponent as Fat} from '../assets/fat.svg'
 import CallAPI from '../datas/API';
 
-// const main = require('../datas/main12.json')
+// const userDatas = require('../datas/main12.json')
 
 
 export default class CardInfos extends PureComponent {

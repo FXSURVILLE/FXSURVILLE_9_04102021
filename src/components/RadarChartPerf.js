@@ -4,7 +4,7 @@ import { Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer } fro
 import '../styles/radarChartPerf.css'
 import CallAPI from '../datas/API';
 
-// const performances = require('../datas/performance12.json')
+// const performancesData = require('../datas/performance12.json')
 
 export default class RadarEffort extends PureComponent {
   constructor(props) {

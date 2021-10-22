@@ -23,7 +23,6 @@ function CustomTooltip({ payload, active }) {
   return null;
 }
 
-// console.log(sessions)
 export default class Target extends PureComponent {
   constructor(props) {
     super(props);

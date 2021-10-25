@@ -38,7 +38,7 @@ const legendText = (value) => {
 
 /**
  * Class Weight
- * @extends Weight
+ * @Class Weight
  * @param {integer} id of a specific user: 12 or 18
  */
 export default class Weight extends PureComponent {

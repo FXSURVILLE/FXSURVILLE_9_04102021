@@ -8,6 +8,7 @@ import CallAPI from '../datas/API';
 
 /**
 * Tooltip customized
+* @component
 * @param {array} payload:The source data of the content to be displayed in the tooltip 
 * @param {boolean} active: If set true, the tooltip is displayed
 * @return {string} tooltip completed with value
@@ -23,6 +24,11 @@ function CustomTooltip({ payload, active }) {
   return null;
 }
 
+/**
+ * Class for CardInfos.
+ * @Class Target
+ * @param {integer} id of a specific user: 12 or 18
+ */
 export default class Target extends PureComponent {
   constructor(props) {
     super(props);
@@ -52,8 +58,8 @@ export default class Target extends PureComponent {
       7: "D",
     }
     /**
-    * Xavis customized with array(day)
-    * @param {integer} transform the number for a letter(day)
+    * Xaxis customized with array(day): transform the integer for a letter(day)
+    * @param {integer}
     * @return {string} return the first letter of the day
     */
     const CustomXaxis = (value) => {
@@ -75,13 +81,13 @@ export default class Target extends PureComponent {
           data={sessions}
           margin={{
             top: 0,
-            right: 0,
+            right: 5,
             left: 5,
             bottom: 0,
           }}
         >
           <CartesianGrid strokeDasharray="3 3" stroke="none" />
-          <XAxis dataKey="day" stroke="#FFFFFF" dx={10} tickFormatter={CustomXaxis} />
+          <XAxis dataKey="day" stroke="#FFFFFF" dx={0} tickFormatter={CustomXaxis} />
           <YAxis hide={true} />
           <Tooltip content={<CustomTooltip />} />
           <Area type="monotone" dataKey="sessionLength" stroke="#FFFFFF" fill="none" />

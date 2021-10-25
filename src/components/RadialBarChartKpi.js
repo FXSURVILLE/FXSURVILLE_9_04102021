@@ -6,6 +6,11 @@ import CallAPI from '../datas/API';
 
 // const userDatas = require('../datas/main12.json')
 
+/**
+ * Class for CardInfos.
+ * @Class Kpi
+ * @param {integer} id of a specific user: 12 or 18
+ */
 export default class Kpi extends PureComponent {
   constructor(props) {
     super(props);
@@ -54,6 +59,7 @@ export default class Kpi extends PureComponent {
         <ResponsiveContainer width="100%" aspect={1.2}>
           <RadialBarChart cx="50%" cy="60%" innerRadius="50%" outerRadius="100%" barSize={10} 
           startAngle={90}
+          endAngle={450}
           data={data}>
             <RadialBar
               background

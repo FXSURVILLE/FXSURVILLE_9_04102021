@@ -6,6 +6,11 @@ import CallAPI from '../datas/API';
 
 // const performancesData = require('../datas/performance12.json')
 
+/**
+ * Class for CardInfos.
+ * @Class RadarEffort
+ * @param {integer} id of a specific user: 12 or 18
+ */
 export default class RadarEffort extends PureComponent {
   constructor(props) {
     super(props);
@@ -47,7 +52,7 @@ export default class RadarEffort extends PureComponent {
     } else {
     return (
       <ResponsiveContainer width="100%" aspect={1.2} className="radar_effort" >
-        <RadarChart cx="50%" cy="50%" outerRadius="60%" data={performances}>
+        <RadarChart cx="50%" cy="65%" outerRadius="60%" data={performances}>
           <PolarGrid />
           <PolarAngleAxis dataKey="kind" stroke="white" axisLine="false" tickFormatter={CustomAxis} />
           {/* <PolarRadiusAxis /> graduation désactivée */}

@@ -9,7 +9,11 @@ import CallAPI from '../datas/API';
 
 // const userDatas = require('../datas/main12.json')
 
-
+/**
+ * Class for CardInfos.
+ * @Class CardInfos
+ * @param {integer} id of a specific user: 12 or 18
+ */
 export default class CardInfos extends PureComponent {
     constructor(props) {
       super(props);

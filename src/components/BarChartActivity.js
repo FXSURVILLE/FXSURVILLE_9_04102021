@@ -4,11 +4,11 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsive
 import '../styles/barChartActivity.css'
 import CallAPI from '../datas/API';
 
-
 // const activites = require('../datas/activity12.json')
 
 /**
 * Tooltip customized
+* @component
 * @param {array} payload:The source data of the content to be displayed in the tooltip 
 * @param {boolean} active: If set true, the tooltip is displayed
 * @return {string} tooltip completed with values
@@ -26,15 +26,21 @@ function CustomTooltip({ payload, active }) {
 }
 
 /**
-* text for legend
-* @param {string} check if "kilogram"
-* @return {string} if "kilogram" return text1, else text2
+ * legend text
+ * @function 
+ * @param {string} check if "kilogram"
+ * @return {string} if "kilogram" return text1, else text2
 */
 const legendText = (value) => {
   value = value === "kilogram" ? "Poids (kg)" : "Calories brûlées (Kcal)"
   return (<span>{value}</span>);
 };
 
+/**
+ * Class Weight
+ * @extends Weight
+ * @param {integer} id of a specific user: 12 or 18
+ */
 export default class Weight extends PureComponent {
   constructor(props) {
     super(props);

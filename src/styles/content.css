@@ -1,8 +1,8 @@
 .content {
   display: flex;
   flex-wrap: wrap;
-  margin: 50px 90px 88px 100px;
-  width: calc(100% - 307px);
+  margin: 50px 4% 88px 4%;
+  width: calc(100% - 8% - 117px);
 }
 
 .welcome {
